@@ -67,12 +67,16 @@
 			<plugin>
     				<groupId>org.apache.maven.plugins</groupId>
     				<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.12.0</version>
+					<version>3.8.1</version>
    				<configuration>
         			<debug>true</debug>
     			</configuration>
 			</plugin>
     	</plugins>
 	</build>
-
+<mirror>
+  <id>central</id>
+  <mirrorOf>central</mirrorOf>
+  <url>https://repo1.maven.org/maven2/</url>
+</mirror>
 </project>
