@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<proxies>
+		<proxy>
+			<id>example-proxy</id>
+			<active>true</active>
+			<protocol>http</protocol>
+			<host>proxy.example.com</host>
+			<port>8080</port>
+			<username>proxyuser</username>
+			<password>somepassword</password>
+			<nonProxyHosts>www.google.com|*.example.com</nonProxyHosts>
+		</proxy>
+	</proxies>
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -73,19 +85,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
-		<proxies>
-			<proxy>
-				<id>myproxy</id>
-				<active>true</active>
-				<protocol>http</protocol>
-				<host>proxy.somewhere.com</host>
-				<port>8080</port>
-				<username>proxyuser</username>
-				<password>somepassword</password>
-				<nonProxyHosts>*.google.com|ibiblio.org</nonProxyHosts>
-			</proxy>
-		</proxies>
-	</settings>
 </project>
