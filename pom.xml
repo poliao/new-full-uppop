@@ -72,9 +72,7 @@
         			<debug>true</debug>
     			</configuration>
 			</plugin>
-    	</plugins>
-	</build>
- <proxies>
+			 <proxies>
    <proxy>
       <id>example-proxy</id>
       <active>true</active>
@@ -86,4 +84,6 @@
       <nonProxyHosts>www.google.com|*.example.com</nonProxyHosts>
     </proxy>
   </proxies>
+    	</plugins>
+	</build>
 </project>
